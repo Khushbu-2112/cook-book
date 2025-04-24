@@ -1,27 +1,101 @@
-# CookBook
+# Cook Book Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
+A modern recipe management application built with Angular 17 that helps users discover, save, and manage their favorite recipes.
 
-## Development server
+[Cook-Book]()
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- **Recipe Discovery**: Browse and search through a collection of recipes
+- **Advanced Filtering**: Filter recipes by:
+  - Search terms
+  - Difficulty level
+  - Ingredients
+- **User Features**:
+  - Save favorite recipes
+  - Personal profile management
+  - Recipe detail viewing
+- **Responsive Design**: Works seamlessly on desktop and mobile devices
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies Used
 
-## Build
+- Angular 17.3.5
+- Bootstrap 5
+- Bootstrap Icons
+- TypeScript
+- RxJS
+- Angular Signals for State Management
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Getting Started
 
-## Running unit tests
+### Prerequisites
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Node.js (v18 or higher)
+- npm (v9 or higher)
 
-## Running end-to-end tests
+### Installation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/cook-book.git
+```
+2. Install dependencies:
+```bash
+cd cook-book
+npm install
+```
+3. Start the development server:
+```bash
+ng serve
+```
+4. Navigate to http://localhost:4200/ in your browser
 
-## Further help
+### Usage
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### Browsing Recipes
+- Visit the recipes page to view all available recipes
+- Use the search bar to find specific recipes
+- Filter recipes by difficulty or ingredients
+
+#### Managing Favorites
+- Click the heart icon to save/unsave recipes
+- View all saved recipes in the Favorites section
+- Remove recipes from favorites as needed
+
+#### Profile Management
+- Update your profile information
+- View your saved recipes
+- Manage your account settings
+
+### Project Structure
+
+src/
+  app/
+    components/
+      about/          # About page component
+      home/           # Landing page component
+      recipe/         # Recipe-related components
+      shared/         # Shared components
+      user/          # User-related components
+    interfaces/      # TypeScript interfaces
+    services/       # Application services
+
+### Development
+Development server
+Run ng serve for a dev server. Navigate to http://localhost:4200/. The application will automatically reload if you change any of the source files.
+
+### Building the project
+Run ng build to build the project. The build artifacts will be stored in the dist/ directory.
+
+### Running tests
+Run ng test to execute the unit tests via Karma.
+
+### Contributing
+Fork the repository
+Create your feature branch (git checkout -b feature/AmazingFeature)
+Commit your changes (git commit -m 'Add some AmazingFeature')
+Push to the branch (git push origin feature/AmazingFeature)
+Open a Pull Request
+
+## Author
+Khushi Raval
