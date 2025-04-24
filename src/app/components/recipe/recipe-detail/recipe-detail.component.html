@@ -1,0 +1,76 @@
+<div class="container py-5">
+  <!-- Loading State -->
+  <div *ngIf="loading" class="text-center">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <!-- Error State -->
+  <div *ngIf="error" class="alert alert-danger" role="alert">
+    {{ error }}
+  </div>
+
+  <!-- Recipe Detail -->
+  <div *ngIf="recipe && !loading" class="recipe-detail">
+    <div class="row">
+      <!-- Recipe Image and Basic Info -->
+      <div class="col-md-6 mb-4">
+        <img [src]="recipe.imageUrl" [alt]="recipe.title" class="img-fluid rounded shadow recipe-image">
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="recipe-info">
+          <h1 class="recipe-title mb-3">{{ recipe.title }}</h1>
+          <p class="recipe-description mb-4">{{ recipe.description }}</p>
+          
+          <div class="recipe-meta mb-4">
+            <span class="badge bg-primary me-2">{{ recipe.difficulty }}</span>
+            <span class="cooking-time">
+              <i class="bi bi-clock me-1"></i>
+              {{ recipe.cookingTime }} minutes
+            </span>
+          </div>
+
+          <button class="btn btn-outline-danger btn-lg favorite-btn" (click)="toggleFavorite()">
+            <i class="bi" [ngClass]="isFavorite() ? 'bi-heart-fill' : 'bi-heart'"></i>
+            {{ isFavorite() ? 'Remove from Favorites' : 'Add to Favorites' }}
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <!-- Ingredients -->
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h3 class="card-title h5 mb-3">
+              <i class="bi bi-list-ul me-2"></i>Ingredients
+            </h3>
+            <ul class="ingredients-list">
+              <li *ngFor="let ingredient of recipe.ingredients" class="mb-2">
+                {{ ingredient }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Instructions -->
+      <div class="col-md-8">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h3 class="card-title h5 mb-3">
+              <i class="bi bi-123 me-2"></i>Instructions
+            </h3>
+            <ol class="instructions-list">
+              <li *ngFor="let instruction of recipe.instructions" class="mb-3">
+                {{ instruction }}
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

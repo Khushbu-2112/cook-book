@@ -1,0 +1,41 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4">My Favorite Recipes</h2>
+  
+  <!-- No favorites message -->
+  <div *ngIf="(favorites$ | async)?.length === 0" class="text-center py-5">
+    <i class="bi bi-heart fs-1 text-muted"></i>
+    <p class="lead mt-3">You haven't saved any favorites yet</p>
+    <button class="btn btn-primary" routerLink="/recipes">Browse Recipes</button>
+  </div>
+
+  <!-- Favorites Grid -->
+  <div class="row g-4">
+    <div *ngFor="let recipe of favorites$ | async" class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img [src]="recipe.imageUrl" 
+             [alt]="recipe.title"
+             class="card-img-top"
+             height="200"
+             style="object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title">{{ recipe.title }}</h5>
+          <p class="card-text text-muted">{{ recipe.description | slice:0:100 }}...</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="badge bg-primary">{{ recipe.difficulty }}</span>
+            <span><i class="bi bi-clock"></i> {{ recipe.cookingTime }} mins</span>
+          </div>
+        </div>
+        <div class="card-footer bg-white border-top-0">
+          <div class="d-flex justify-content-between">
+            <button class="btn btn-outline-primary" [routerLink]="['/recipes', recipe.id]">
+              View Recipe
+            </button>
+            <button class="btn btn-outline-danger" (click)="removeFromFavorites(recipe.id)">
+              <i class="bi bi-heart-fill"></i> Remove
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,94 @@
+/* Profile Container Styles */
+.container {
+  padding-bottom: 80px; /* Account for fixed footer */
+}
+
+/* Profile Image Styles */
+.rounded-circle {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.rounded-circle:hover {
+  transform: scale(1.05);
+}
+
+/* Profile Info Styles */
+h4 {
+  color: #333;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+/* Favorites List Styles */
+.list-group-item {
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.list-group-item:hover {
+  background-color: #f8f9fa;
+  border-left: 4px solid #0d6efd;
+  transform: translateX(5px);
+}
+
+/* Form Styles */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  padding: 10px 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.form-label {
+  font-weight: 500;
+  color: #495057;
+}
+
+/* Button Styles */
+.btn-primary {
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Card-like Section Styles */
+.col-md-4, .col-md-8, .col-md-12 {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+/* Settings Section */
+.settings-section {
+  margin-top: 30px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .rounded-circle {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .container {
+    padding: 15px;
+  }
+}

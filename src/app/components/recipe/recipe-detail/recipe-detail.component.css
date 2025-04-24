@@ -1,0 +1,95 @@
+/* Recipe Image Styles */
+.recipe-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Recipe Info Styles */
+.recipe-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-title {
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.recipe-description {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.recipe-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cooking-time {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Card Styles */
+.card {
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* List Styles */
+.ingredients-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.ingredients-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.ingredients-list li:last-child {
+  border-bottom: none;
+}
+
+.instructions-list li {
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+/* Button Styles */
+.favorite-btn {
+  padding: 12px 24px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.favorite-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .recipe-image {
+    height: 300px;
+  }
+  
+  .recipe-info {
+    text-align: center;
+  }
+  
+  .recipe-meta {
+    justify-content: center;
+  }
+}

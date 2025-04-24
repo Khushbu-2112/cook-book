@@ -1,0 +1,26 @@
+/* Search input styling */
+.input-group {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+.input-group-text {
+  background-color: white;
+  border-right: none;
+}
+
+.form-control:focus {
+  border-color: #86b7fe;
+  box-shadow: none;
+}
+
+/* Select styling */
+.form-select {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .input-group, .form-select {
+    margin-bottom: 1rem;
+  }
+}

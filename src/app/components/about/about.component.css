@@ -1,0 +1,11 @@
+.card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.list-unstyled li {
+  padding: 8px 0;
+}
