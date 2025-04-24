@@ -2,7 +2,8 @@
 
 A modern recipe management application built with Angular 17 that helps users discover, save, and manage their favorite recipes.
 
-[Cook-Book]()
+![Screenshot 2025-04-24 at 10 31 44 PM](https://github.com/user-attachments/assets/5c8ed96a-9a41-4aaa-b950-613f7729a545)
+
 
 ## Features
 
@@ -50,7 +51,7 @@ ng serve
 ```
 4. Navigate to http://localhost:4200/ in your browser
 
-### Usage
+## Usage
 
 #### Browsing Recipes
 - Visit the recipes page to view all available recipes
@@ -90,7 +91,7 @@ Run ng build to build the project. The build artifacts will be stored in the dis
 ### Running tests
 Run ng test to execute the unit tests via Karma.
 
-### Contributing
+## Contributing
 Fork the repository
 Create your feature branch (git checkout -b feature/AmazingFeature)
 Commit your changes (git commit -m 'Add some AmazingFeature')
